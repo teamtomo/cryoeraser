@@ -1,3 +1,5 @@
+from typing import Tuple
+
 import numpy as np
 import einops
 
@@ -7,7 +9,7 @@ from cryoeraser.image_statistics import estimate_local_mean, estimate_standard_d
 def erase_2d(
     image: np.ndarray,
     mask: np.ndarray,
-    background_model_resolution: tuple[int, int] = (5, 5),
+    background_model_resolution: Tuple[int, int] = (5, 5),
     n_background_samples: int = 20000,
 ) -> np.ndarray:
     """Erase image features in masked regions.
@@ -48,7 +50,7 @@ def erase_2d(
 def _erase_single_image(
     image: np.ndarray,
     mask: np.ndarray,
-    background_model_resolution: tuple[int, int] = (5, 5),
+    background_model_resolution: Tuple[int, int] = (5, 5),
     n_background_samples: int = 20000,
 ) -> np.ndarray:
     """Replace regions of an image with gaussian noise matching local image statistics.

@@ -63,7 +63,7 @@ def estimate_local_mean(
     return np.asarray(local_mean, dtype=input_dtype)
 
 
-def estimate_standard_deviation(image: np.ndarray, mask: np.ndarray | None) -> float:
+def estimate_standard_deviation(image: np.ndarray, mask: Optional[np.ndarray]) -> float:
     """Estimate the standard deviation of an image from a central crop.
 
     Parameters
