@@ -1,0 +1,54 @@
+site_name: cryoeraser
+site_url: https://teamtomo.org/cryoeraser
+site_author: teamtomo
+site_description: >-
+  Documentation for cryoeraser: detect and segment fiducials in cryo-EM images.
+repo_name: teamtomo/cryoeraser
+repo_url: https://github.com/teamtomo/cryoeraser
+edit_uri: edit/main/docs/
+
+copyright: Copyright &copy; 2023 - 2023 teamtomo
+
+
+nav:
+  - index.md
+  - erase_2d_example.ipynb
+
+theme:
+  icon:
+    logo: material/cube-outline
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: blue
+
+  features:
+    - navigation.instant
+    - navigation.expand
+    - search.highlight
+    - search.suggest
+    - content.tabs.link
+
+markdown_extensions:
+  - admonition
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
+
+plugins:
+  - search
+  - mkdocs-jupyter
+
+
